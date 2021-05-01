@@ -30,6 +30,9 @@ public class StepDefs {
 		
 	}
 	
-	
+	@After
+	public void teatDown() {
+		driver.close();
+	}
 	
 }
