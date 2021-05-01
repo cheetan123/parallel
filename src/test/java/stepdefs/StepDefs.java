@@ -4,12 +4,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import cucumber.api.Scenario;
+import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 
 public class StepDefs {
 
 	Scenario scenario;
+	WebDriver driver;
 	
 	@Before
 	public void SetUp(Scenario s) {
@@ -21,10 +23,13 @@ public class StepDefs {
 		
 		System.setProperty("webdriver.chrome.driver", "/Users/chetanlashkari/Documents/work/chromedriver");
 
-		WebDriver driver = new ChromeDriver();
+		driver = new ChromeDriver();
 		driver.get(string);
 		scenario.write("Opened the Browser with URL: " + string);
 		
+		
 	}
+	
+	
 	
 }
