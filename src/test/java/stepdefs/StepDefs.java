@@ -29,13 +29,15 @@ public class StepDefs {
 		
 		DesiredCapabilities cap = new DesiredCapabilities();
 		//cap.setBrowserName(BrowserType.CHROME);
-		cap.setBrowserName(BrowserType.SAFARI);
+		cap.setBrowserName(BrowserType.CHROME);
 		
 		//System.setProperty("webdriver.chrome.driver", "/Users/chetanlashkari/Documents/work/chromedriver");
 
 		driver = new RemoteWebDriver(new URL("http://192.168.29.190:4444/wd/hub"),cap);
 		driver.get(string);
+		driver.manage().window().maximize();
 		scenario.write("Opened the Browser with URL: " + string);
+		Thread.sleep(30000);
 		
 		
 	}
