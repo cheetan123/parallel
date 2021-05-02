@@ -28,7 +28,8 @@ public class StepDefs {
 	public void i_open_the_Browser_and_Navigate_to_the_URL(String string) throws Exception {
 		
 		DesiredCapabilities cap = new DesiredCapabilities();
-		cap.setBrowserName(BrowserType.CHROME);
+		//cap.setBrowserName(BrowserType.CHROME);
+		cap.setBrowserName(BrowserType.SAFARI);
 		
 		//System.setProperty("webdriver.chrome.driver", "/Users/chetanlashkari/Documents/work/chromedriver");
 
