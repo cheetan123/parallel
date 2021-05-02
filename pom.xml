@@ -1,17 +1,19 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.visionit</groupId>
-  <artifactId>paralllel</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  
-  	<properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.visionit</groupId>
+	<artifactId>paralllel</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
 		<cucumber.version>4.2.0</cucumber.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
-  
-  	<build>
+
+	<build>
 		<plugins>
 			<plugin>
 				<artifactId>maven-surefire-plugin</artifactId>
@@ -20,14 +22,14 @@
 					<parallel>methods</parallel>
 					<threadCount>4</threadCount>
 					<perCoreThreadCount>false</perCoreThreadCount>
-					<!-- <useUnlimitedThreads>true</useUnlimitedThreads>-->
+					<!-- <useUnlimitedThreads>true</useUnlimitedThreads> -->
 					<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
-	
-  	<!-- For Cucumber -->
+
+	<!-- For Cucumber -->
 	<dependencies>
 		<dependency>
 			<groupId>io.cucumber</groupId>
@@ -97,7 +99,13 @@
 			<artifactId>mongo-java-driver</artifactId>
 			<version>3.10.2</version>
 		</dependency>
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>4.3.0</version>
+			<scope>test</scope>
+		</dependency>
 
 	</dependencies>
-  
+
 </project>

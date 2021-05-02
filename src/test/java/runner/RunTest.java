@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions
 ( 		features="classpath:features",
 		glue="",
-		tags="",
+		tags="@api",
 		plugin = {"pretty",
 				"html:target/html/",
 				"json:target/json/file.json",
